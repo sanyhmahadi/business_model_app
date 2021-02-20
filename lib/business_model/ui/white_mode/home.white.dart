@@ -181,7 +181,7 @@ class HomePage extends StatelessWidget {
                                       padding: const EdgeInsets.only(
                                           top: 35.0, left: 8.0),
                                       child: Text(
-                                        "Nobaab Hedar pot sudo game khele time wase koros",
+                                        "Nobaab Hedar pot sudo game khele time waste koros",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black),
