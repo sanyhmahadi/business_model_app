@@ -1,74 +1,59 @@
+import 'package:business_Model_App/business_model/ui/white_mode/catalogous_for_white.dart';
+import 'package:business_Model_App/business_model/ui/white_mode/home.white.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class MyNavigationBar extends StatefulWidget {
-  MyNavigationBar({Key key}) : super(key: key);
-
+class BottomNavigation extends StatefulWidget {
   @override
-  _MyNavigationBarState createState() => _MyNavigationBarState();
+  _BottomNavigationState createState() => _BottomNavigationState();
 }
 
-class _MyNavigationBarState extends State<MyNavigationBar> {
-  int _selectedIndex = 0;
-  // ignore: unused_field
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text('Home Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('ContactBook Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Time Circle Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+class _BottomNavigationState extends State<BottomNavigation> {
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    final tabs = [HomePage(), CatalogusPageWhite()];
     return Scaffold(
+      body: tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-                icon: Icon(
-                  FontAwesomeIcons.home,
-                  color: Colors.black,
-                ),
-                // ignore: deprecated_member_use
-                title: Text('Home'),
-                backgroundColor: Colors.white),
-            BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.addressBook, color: Colors.black),
-                // ignore: deprecated_member_use
-                title: Text('Contact Book'),
-                backgroundColor: Colors.white),
-            BottomNavigationBarItem(
-              icon: Icon(FontAwesomeIcons.male, color: Colors.black),
+        selectedItemColor: Color(0xFF8E7EF0),
+        unselectedItemColor: Colors.black,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        selectedFontSize: 11,
+        unselectedFontSize: 11,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _currentIndex,
+        items: [
+          BottomNavigationBarItem(
               // ignore: deprecated_member_use
-              title: Text('Time Circle'),
-              backgroundColor: Colors.white,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(FontAwesomeIcons.timesCircle, color: Colors.black),
+              title: Text(
+                'Home',
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 10),
+              ),
+              icon: Icon(CupertinoIcons.home)),
+          BottomNavigationBarItem(
               // ignore: deprecated_member_use
-              title: Text('Time Circle'),
-              backgroundColor: Colors.white,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(FontAwesomeIcons.tools, color: Colors.black),
+              title: Text(
+                'Chat',
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 10),
+              ),
+              icon: Icon(CupertinoIcons.mail)),
+          BottomNavigationBarItem(
               // ignore: deprecated_member_use
-              title: Text('Time Circle'),
-              backgroundColor: Colors.white,
-            ),
-          ],
-          type: BottomNavigationBarType.shifting,
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.transparent,
-          iconSize: 25,
-          onTap: _onItemTapped,
-          elevation: 0.0),
+              title: Text(
+                'Profile',
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 10),
+              ),
+              icon: Icon(CupertinoIcons.person)),
+        ],
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }
