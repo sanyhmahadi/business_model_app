@@ -1,4 +1,5 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyNavigationBar extends StatefulWidget {
   MyNavigationBar({Key key}) : super(key: key);
@@ -9,12 +10,13 @@ class MyNavigationBar extends StatefulWidget {
 
 class _MyNavigationBarState extends State<MyNavigationBar> {
   int _selectedIndex = 0;
+  // ignore: unused_field
   static const List<Widget> _widgetOptions = <Widget>[
     Text('Home Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Search Page',
+    Text('ContactBook Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    Text('Profile Page',
+    Text('Time Circle Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
   ];
 
@@ -30,26 +32,43 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
       bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: Icon(
+                  FontAwesomeIcons.home,
+                  color: Colors.black,
+                ),
+                // ignore: deprecated_member_use
                 title: Text('Home'),
-                backgroundColor: Colors.green),
+                backgroundColor: Colors.white),
             BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                title: Text('Search'),
-                backgroundColor: Colors.yellow),
+                icon: Icon(FontAwesomeIcons.addressBook, color: Colors.black),
+                // ignore: deprecated_member_use
+                title: Text('Contact Book'),
+                backgroundColor: Colors.white),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              title: Text('Profile'),
-              backgroundColor: Colors.blue,
+              icon: Icon(FontAwesomeIcons.male, color: Colors.black),
+              // ignore: deprecated_member_use
+              title: Text('Time Circle'),
+              backgroundColor: Colors.white,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.timesCircle, color: Colors.black),
+              // ignore: deprecated_member_use
+              title: Text('Time Circle'),
+              backgroundColor: Colors.white,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.tools, color: Colors.black),
+              // ignore: deprecated_member_use
+              title: Text('Time Circle'),
+              backgroundColor: Colors.white,
             ),
           ],
           type: BottomNavigationBarType.shifting,
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.black,
-          iconSize: 40,
+          selectedItemColor: Colors.transparent,
+          iconSize: 25,
           onTap: _onItemTapped,
-          elevation: 5),
+          elevation: 0.0),
     );
   }
 }
-*/

@@ -1,12 +1,8 @@
+import 'package:business_Model_App/business_model/ui/white_mode/page_bottomBar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +26,7 @@ class _HomePageState extends State<HomePage> {
             secondtRow(),
             thirdRow(),
             lastRow(context),
+            MyNavigationBar(),
           ],
         ),
       ),
@@ -251,7 +248,7 @@ class _HomePageState extends State<HomePage> {
                                       padding: const EdgeInsets.only(
                                           top: 35.0, left: 8.0),
                                       child: Text(
-                                        "NanarGhori hate proi,moja kori",
+                                        "bal",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black),
@@ -289,143 +286,140 @@ class _HomePageState extends State<HomePage> {
 
   Widget thirdRow() {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(8.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Stack(
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(10.0),
-                          width: 153, //MediaQuery.of(context).size.width,
-                          height: 153,
-                          decoration: BoxDecoration(
-                            color: Color(0xfff1f2f6),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            children: [
-                              Stack(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Row(
-                                      children: [
-                                        Icon(
-                                          FontAwesomeIcons.share,
-                                          color: Colors.black,
-                                          size: 20,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Stack(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 35.0, left: 8.0),
-                                        child: Text(
-                                          "Nobaab Hedar pot sudo game khele time wase koros",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  Stack(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 105.0, left: 8.0),
-                                        child: Text(
-                                          "Baingchod",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Stack(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10.0),
+                        width: 153, //MediaQuery.of(context).size.width,
+                        height: 153,
+                        decoration: BoxDecoration(
+                          color: Color(0xfff1f2f6),
+                          borderRadius: BorderRadius.circular(15),
                         ),
-                      ],
-                    ),
-                  ],
-                ),
-                Stack(
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(10.0),
-                          width: 153, //MediaQuery.of(context).size.width,
-                          height: 153,
-                          decoration: BoxDecoration(
-                            color: Color(0xfff1f2f6),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            children: [
-                              Stack(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Row(
-                                      children: [
-                                        Icon(
-                                          FontAwesomeIcons.facebookMessenger,
-                                          color: Colors.black,
-                                          size: 20,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Stack(
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
                                     children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 35.0, left: 8.0),
-                                        child: Text(
-                                          "NanarGhori hate proi,moja kori",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black),
-                                        ),
-                                      )
+                                      Icon(
+                                        FontAwesomeIcons.share,
+                                        color: Colors.black,
+                                        size: 20,
+                                      ),
                                     ],
                                   ),
-                                  Stack(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 105.0, left: 8.0),
-                                        child: Text(
-                                          "Hedarpot",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                                Stack(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 35.0, left: 8.0),
+                                      child: Text(
+                                        "NobaabBoobs",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Stack(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 105.0, left: 8.0),
+                                      child: Text(
+                                        "Baingchod",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Stack(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10.0),
+                        width: 153, //MediaQuery.of(context).size.width,
+                        height: 153,
+                        decoration: BoxDecoration(
+                          color: Color(0xfff1f2f6),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        FontAwesomeIcons.facebookMessenger,
+                                        color: Colors.black,
+                                        size: 20,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Stack(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 35.0, left: 8.0),
+                                      child: Text(
+                                        "NanarGhori hate proi,moja kori",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Stack(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 105.0, left: 8.0),
+                                      child: Text(
+                                        "Hedarpot",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),
@@ -434,7 +428,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget lastRow(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(40.0),
       child: Column(children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
