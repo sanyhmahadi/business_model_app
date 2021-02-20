@@ -1,7 +1,7 @@
-import 'package:business_Model_App/business_model/ui/white_mode/catalogous_for_white.dart';
-import 'package:business_Model_App/business_model/ui/white_mode/home.white.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'business_model/ui/white_mode/catalogous_for_white.dart';
+import 'business_model/ui/white_mode/home.white.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override
