@@ -24,9 +24,9 @@ class HomePage extends StatelessWidget {
           children: [
             firstRow(),
             secondtRow(),
-            thirdRow(),
-            lastRow(context),
-            MyNavigationBar(),
+            thirdRow(context),
+
+            //MyNavigationBar(),
           ],
         ),
       ),
@@ -153,7 +153,7 @@ class HomePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(8.0),
                         width: 153, //MediaQuery.of(context).size.width,
                         height: 153,
                         decoration: BoxDecoration(
@@ -219,7 +219,7 @@ class HomePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(8.0),
                         width: 153, //MediaQuery.of(context).size.width,
                         height: 153,
                         decoration: BoxDecoration(
@@ -284,7 +284,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget thirdRow() {
+  Widget thirdRow(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -298,7 +298,7 @@ class HomePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(8.0),
                         width: 153, //MediaQuery.of(context).size.width,
                         height: 153,
                         decoration: BoxDecoration(
@@ -361,7 +361,7 @@ class HomePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(8.0),
                         width: 153, //MediaQuery.of(context).size.width,
                         height: 153,
                         decoration: BoxDecoration(
@@ -421,77 +421,39 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
+          Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 17.0, left: 8.0),
+                child: Column(children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Stack(
+                        children: [
+                          Container(
+                            //margin: EdgeInsets.only(top: 10),
+                            padding: EdgeInsets.all(8.0),
+                            width: MediaQuery.of(context).size.width,
+                            height: 139,
+                            decoration: BoxDecoration(
+                              color: Color(0xfff1f2f6),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Text("Inhaleren/Roken",
+                                style: TextStyle(
+                                    fontSize: 19, color: Colors.black)),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ]),
+              )
+            ],
+          )
         ],
       ),
     );
   }
-
-  Widget lastRow(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
-      child: Column(children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Stack(
-              children: [
-                Container(
-                  //margin: EdgeInsets.only(top: 10),
-                  padding: EdgeInsets.all(10.0),
-                  width: MediaQuery.of(context).size.width,
-                  height: 139,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff1f2f6),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Text("Inhaleren/Roken",
-                      style: TextStyle(fontSize: 19, color: Colors.black)),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ]),
-    );
-  }
 }
-
-/*   
-
-Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 20.0),
-                                  child: Text("Toevoegen",
-                                      style: TextStyle(
-                                          fontSize: 19,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold)),
-                                ),
-                              ],
-                            ),
-
-Stack(
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 18),
-                padding: EdgeInsets.all(10.0),
-                width: MediaQuery.of(context).size.width,
-                height: 153,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    Color(0xff8854d0),
-                    Color(0xff81ecec),
-                  ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Text("Drinken",
-                    style: TextStyle(fontSize: 19, color: Colors.white)),
-              ),
-            ],
-          ),
-
-
-
-*/
