@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'business_model/ui/white_mode/catalogous_for_white.dart';
 import 'business_model/ui/white_mode/home.white.dart';
+import 'business_model/ui/white_mode/pageno14.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override
@@ -37,7 +38,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       CatalogusPageWhite(),
       HomePage(),
       CatalogusPageWhite(),
-      HomePage(),
+      PageNo14(),
     ];
     return Scaffold(
       body: tabs[_currentIndex],
